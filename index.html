@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Електромонтер — ПП "ИРИС-ПАРТНЕР"</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230D0D0D'/><text x='16' y='24' text-anchor='middle' font-size='22' fill='%23F5C518'>E</text></svg>"/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -11,9 +12,9 @@
     html { scroll-behavior: smooth; }
     body { background: var(--dark); color: var(--text); font-family: 'Manrope', sans-serif; overflow-x: hidden; }
     .hero { min-height: 100svh; display: flex; flex-direction: column; justify-content: flex-end; padding: 2.5rem 1.5rem 3rem; position: relative; overflow: hidden; }
-    .hero-bg { position: absolute; inset: 0; background: linear-gradient(135deg, #0D0D0D 0%, #1a1200 60%, #0D0D0D 100%); }
-    .hero-bg::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse 80% 60% at 70% 30%, rgba(245,197,24,0.12) 0%, transparent 70%), radial-gradient(ellipse 40% 40% at 20% 80%, rgba(245,197,24,0.06) 0%, transparent 60%); }
-    .hero-bg::after { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(-55deg, transparent, transparent 40px, rgba(245,197,24,0.025) 40px, rgba(245,197,24,0.025) 41px); }
+    .hero-bg { position: absolute; inset: 0; background: #0D0D0D; }
+    .hero-bg::before { content: ''; position: absolute; inset: 0; background: url('https://upload.wikimedia.org/wikipedia/commons/a/ab/Nikola_Tesla_holding_bulb.jpg') center top/cover no-repeat; opacity: 0.35; }
+    .hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(13,13,13,0.97) 0%, rgba(13,13,13,0.6) 50%, rgba(13,13,13,0.4) 100%); }
     .badge { position: absolute; top: 1.5rem; right: 1.5rem; background: var(--yellow); color: var(--dark); font-family: 'Bebas Neue', sans-serif; font-size: 0.85rem; letter-spacing: 0.12em; padding: 0.35rem 0.75rem; border-radius: 2px; z-index: 2; }
     .hero-label { position: relative; z-index: 2; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.25em; text-transform: uppercase; color: var(--yellow); margin-bottom: 0.75rem; animation: fadeUp 0.6s ease both; }
     .hero-title { position: relative; z-index: 2; font-family: 'Bebas Neue', sans-serif; font-size: clamp(3.5rem, 15vw, 7rem); line-height: 0.92; color: #fff; animation: fadeUp 0.7s 0.1s ease both; }
@@ -96,35 +97,47 @@
 <section class="section reveal">
   <p class="section-label">Наша робота</p>
   <h2 class="section-title">Фото з об'єктів</h2>
-  <p class="gallery-counter">18 фотографій · натисніть для перегляду</p>
+  <p class="gallery-counter">30 фотографій · натисніть для перегляду</p>
   <div class="gallery-grid">
     <div class="gallery-item" onclick="openLightbox(0)"><img src="photos/IMG_20260501_161653_592.jpg" alt="Робота 1" loading="lazy"/></div>
     <div class="gallery-item" onclick="openLightbox(1)"><img src="photos/IMG_20260501_161653_698.jpg" alt="Робота 2" loading="lazy"/></div>
     <div class="gallery-item" onclick="openLightbox(2)"><img src="photos/IMG_20260501_161804_629.jpg" alt="Робота 3" loading="lazy"/></div>
     <div class="gallery-item" onclick="openLightbox(3)"><img src="photos/IMG_20260501_161804_643.jpg" alt="Робота 4" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(4)"><img src="photos/IMG_20260504_150826_264.jpg" alt="Робота 5" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(5)"><img src="photos/IMG_20260504_150831_253.jpg" alt="Робота 6" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(6)"><img src="photos/IMG_20260504_150900_134.jpg" alt="Робота 7" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(7)"><img src="photos/doc_1.jpeg" alt="Робота 8" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(8)"><img src="photos/doc_2.jpeg" alt="Робота 9" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(9)"><img src="photos/doc_3.jpeg" alt="Робота 10" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(10)"><img src="photos/doc_4.jpeg" alt="Робота 11" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(11)"><img src="photos/doc_5.jpeg" alt="Робота 12" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(12)"><img src="photos/doc_6.jpeg" alt="Робота 13" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(13)"><img src="photos/doc_7.jpeg" alt="Робота 14" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(14)"><img src="photos/doc_9.jpeg" alt="Робота 15" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(15)"><img src="photos/doc_10.jpeg" alt="Робота 16" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(16)"><img src="photos/doc_11.jpeg" alt="Робота 17" loading="lazy"/></div>
-    <div class="gallery-item" onclick="openLightbox(17)"><img src="photos/doc_13.jpeg" alt="Робота 18" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(4)"><img src="photos/IMG_20260504_150831_253.jpg" alt="Робота 5" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(5)"><img src="photos/IMG_20260504_150900_134.jpg" alt="Робота 6" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(6)"><img src="photos/doc_1.jpeg" alt="Робота 7" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(7)"><img src="photos/doc_2.jpeg" alt="Робота 8" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(8)"><img src="photos/doc_3.jpeg" alt="Робота 9" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(9)"><img src="photos/doc_4.jpeg" alt="Робота 10" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(10)"><img src="photos/doc_5.jpeg" alt="Робота 11" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(11)"><img src="photos/doc_6.jpeg" alt="Робота 12" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(12)"><img src="photos/doc_7.jpeg" alt="Робота 13" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(13)"><img src="photos/doc_9.jpeg" alt="Робота 14" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(14)"><img src="photos/doc_10.jpeg" alt="Робота 15" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(15)"><img src="photos/doc_11.jpeg" alt="Робота 16" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(16)"><img src="photos/doc_13.jpeg" alt="Робота 17" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(17)"><img src="photos/IMG_20260504_160155_294.jpg" alt="Робота 18" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(18)"><img src="photos/IMG_20260504_160155_272.jpg" alt="Робота 19" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(19)"><img src="photos/IMG_20260501_161705_728.jpg" alt="Робота 20" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(20)"><img src="photos/IMG_20260501_161710_150.jpg" alt="Робота 21" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(21)"><img src="photos/IMG_20260501_161713_894.jpg" alt="Робота 22" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(22)"><img src="photos/IMG_20260501_161734_721.jpg" alt="Робота 23" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(23)"><img src="photos/IMG_20260501_161737_366.jpg" alt="Робота 24" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(24)"><img src="photos/IMG_20260501_161746_097.jpg" alt="Робота 25" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(25)"><img src="photos/IMG_20260501_161754_304.jpg" alt="Робота 26" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(26)"><img src="photos/IMG_20260501_161759_234.jpg" alt="Робота 27" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(27)"><img src="photos/IMG_20260501_161759_367.jpg" alt="Робота 28" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(28)"><img src="photos/IMG_20260501_161734_721b.jpg" alt="Робота 29" loading="lazy"/></div>
+    <div class="gallery-item" onclick="openLightbox(29)"><img src="photos/IMG_20260504_175950_297.jpg" alt="Робота 30" loading="lazy"/></div>
   </div>
 </section>
 
 <div class="lightbox" id="lightbox">
   <button class="lb-close" onclick="closeLightbox()">✕</button>
-  <img class="lightbox-img" id="lbImg" src="" alt=""/>
+  <img class="lightbox-img" id="lbImg" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt=""/>
   <div class="lightbox-controls">
     <button class="lb-btn" onclick="prevPhoto()">‹</button>
-    <span class="lb-counter" id="lbCounter">1 / 38</span>
+    <span class="lb-counter" id="lbCounter">1 / 19</span>
     <button class="lb-btn" onclick="nextPhoto()">›</button>
   </div>
 </div>
@@ -182,6 +195,67 @@
   </div>
 </section>
 
+<section class="tesla-section reveal" style="display:none">
+  <div class="tesla-inner">
+    <div class="tesla-quote-col">
+      <p class="section-label">Натхнення</p>
+      <h2 class="section-title">Нікола Тесла</h2>
+      <p class="tesla-years">1856 — 1943</p>
+      <blockquote class="tesla-quote">
+        «Якщо хочеш зрозуміти Всесвіт — думай про енергію, частоту і вібрацію.»
+      </blockquote>
+      <div class="tesla-facts">
+        <div class="tesla-fact">
+          <span class="tesla-fact-num">700+</span>
+          <span class="tesla-fact-label">патентів у 26 країнах</span>
+        </div>
+        <div class="tesla-fact">
+          <span class="tesla-fact-num">AC</span>
+          <span class="tesla-fact-label">винайшов змінний струм</span>
+        </div>
+        <div class="tesla-fact">
+          <span class="tesla-fact-num">Тл</span>
+          <span class="tesla-fact-label">одиниця магн. індукції названа на честь нього</span>
+        </div>
+      </div>
+    </div>
+    <div class="tesla-photos-col">
+      <div class="tesla-photo tesla-photo--main">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Nikola_Tesla_holding_bulb.jpg" alt="Нікола Тесла з лампою" crossorigin="anonymous"/>
+      </div>
+      <div class="tesla-photo tesla-photo--lab">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d4/N.Tesla.JPG" alt="Портрет Ніколи Тесли" crossorigin="anonymous"/>
+        <span class="tesla-photo-cap">Портрет, ~1896</span>
+      </div>
+      <div class="tesla-photo tesla-photo--coil">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/Nikola_Tesla_holding_bulb.jpg" alt="Тесла з лампою" crossorigin="anonymous"/>
+        <span class="tesla-photo-cap">Тесла з лампою розжарювання</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tesla-section { padding: 4rem 1.5rem; background: #111; border-top: 1px solid #2A2A2A; border-bottom: 1px solid #2A2A2A; }
+  .tesla-inner { display: grid; gap: 2.5rem; }
+  .tesla-years { font-size: 0.75rem; letter-spacing: 0.2em; color: var(--muted); margin-bottom: 1.5rem; font-weight: 500; }
+  .tesla-quote { border-left: 3px solid var(--yellow); padding-left: 1.25rem; font-size: 1rem; line-height: 1.7; color: #C8C8C8; font-style: italic; margin-bottom: 2rem; }
+  .tesla-facts { display: grid; grid-template-columns: repeat(3,1fr); gap: 1rem; }
+  .tesla-fact { display: flex; flex-direction: column; gap: 0.25rem; }
+  .tesla-fact-num { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--yellow); line-height: 1; }
+  .tesla-fact-label { font-size: 0.7rem; color: var(--muted); line-height: 1.4; }
+  .tesla-photos-col { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto auto; gap: 0.5rem; }
+  .tesla-photo { position: relative; overflow: hidden; border-radius: 4px; background: #1a1a1a; }
+  .tesla-photo--main { grid-column: 1 / -1; aspect-ratio: 16/9; }
+  .tesla-photo--lab, .tesla-photo--coil { aspect-ratio: 1; }
+  .tesla-photo img { width: 100%; height: 100%; object-fit: cover; display: block; filter: grayscale(30%) contrast(1.05); transition: transform 0.4s ease; }
+  .tesla-photo:hover img { transform: scale(1.04); }
+  .tesla-photo-cap { position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); font-size: 0.62rem; color: rgba(255,255,255,0.6); padding: 0.6rem 0.6rem 0.4rem; letter-spacing: 0.05em; }
+  @media (min-width: 640px) {
+    .tesla-inner { grid-template-columns: 1fr 1fr; align-items: start; }
+  }
+</style>
+
 <div class="offer-strip reveal">
   <p class="section-label">Чому ми</p>
   <h2 class="section-title">Ми пропонуємо</h2>
@@ -196,7 +270,7 @@
 <section class="contact-section reveal">
   <p class="section-label">Зв'язок</p>
   <h2 class="section-title" style="font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,8vw,3.5rem);color:#fff;margin-bottom:.25rem;">Надішліть резюме</h2>
-  <p class="contact-name">Андрей Виталич · Директор</p>
+  <p class="contact-name">Андрій Віталійович · Директор</p>
   <div class="contact-links">
     <a href="https://t.me/+380675050256" class="contact-link"><span>✈</span> Telegram: +380675050256</a>
     <a href="tel:+380675050256" class="contact-link"><span>📞</span> 067 505-02-56</a>
@@ -212,10 +286,16 @@
   const photos = [
     'photos/IMG_20260501_161653_592.jpg','photos/IMG_20260501_161653_698.jpg',
     'photos/IMG_20260501_161804_629.jpg','photos/IMG_20260501_161804_643.jpg',
-    'photos/IMG_20260504_150826_264.jpg','photos/IMG_20260504_150831_253.jpg','photos/IMG_20260504_150900_134.jpg',
+    'photos/IMG_20260504_150831_253.jpg','photos/IMG_20260504_150900_134.jpg',
     'photos/doc_1.jpeg','photos/doc_2.jpeg','photos/doc_3.jpeg','photos/doc_4.jpeg','photos/doc_5.jpeg',
     'photos/doc_6.jpeg','photos/doc_7.jpeg','photos/doc_9.jpeg','photos/doc_10.jpeg',
-    'photos/doc_11.jpeg','photos/doc_13.jpeg'
+    'photos/doc_11.jpeg','photos/doc_13.jpeg',
+    'photos/IMG_20260504_160155_294.jpg','photos/IMG_20260504_160155_272.jpg',
+    'photos/IMG_20260501_161705_728.jpg','photos/IMG_20260501_161710_150.jpg',
+    'photos/IMG_20260501_161713_894.jpg','photos/IMG_20260501_161734_721.jpg',
+    'photos/IMG_20260501_161737_366.jpg','photos/IMG_20260501_161746_097.jpg',
+    'photos/IMG_20260501_161754_304.jpg','photos/IMG_20260501_161759_234.jpg',
+    'photos/IMG_20260501_161759_367.jpg','photos/IMG_20260501_161734_721b.jpg','photos/IMG_20260504_175950_297.jpg'
   ];
   let current = 0;
 

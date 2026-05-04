@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"/home/igor/Завантаження/files \\(3\\)/IMG_20260504_160155_294.jpg\" \"/home/igor/Документи/GitHub/iris-vakansiya/photos/\")",
+      "Bash(cp \"/home/igor/Завантаження/files \\(3\\)/IMG_20260504_160155_272.jpg\" \"/home/igor/Документи/GitHub/iris-vakansiya/photos/\")"
+    ]
+  }
+}
